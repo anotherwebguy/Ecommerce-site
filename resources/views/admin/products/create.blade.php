@@ -27,30 +27,35 @@
 
                                 <div class="form-group">
 
-                                    {{ Form::label('product_name','Product Price:')}}
-                                    {{ Form::text('product','',['class'=>'form-control border-input','placeholder'=>'Macbook pro'])}}
+                                    {{ Form::label('price','Product Price:')}}
+                                    {{ Form::text('price','',['class'=>'form-control border-input','placeholder'=>'$2500'])}}
 
-                                    <label>Product Price:</label>
-                                    <input type="text" class="form-control border-input" placeholder="$2500">
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Product Description:</label>
-                                    <textarea name="" id="" cols="30" rows="10"
-                                                class="form-control border-input" placeholder="Product Description"></textarea>
+
+                                    {{ Form::label('descrption','Description')}}
+                                    {{ Form::textarea('description','',['class'=>'form-control border-input','placeholder'=>'Product Description'])}}
+
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Product Image:</label>
-                                    <input type="file" class="form-control border-input">
+
+                                    {{ Form::label('file','File')}}
+                                    {{ Form::file('image',['class'=>'form-control border-input'])}}
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    {{ Form::submit('ADD PRODUCT',['class'=>'btn btn-primary'])}}
+
                                 </div>
 
                             </div>
 
                         </div>
-                        <div class="">
-                            <button type="submit" class="btn btn-info btn-fill btn-wd">Add Product</button>
-                        </div>
+
                         <div class="clearfix"></div>
                     {!! Form::close() !!}
                 </div>
